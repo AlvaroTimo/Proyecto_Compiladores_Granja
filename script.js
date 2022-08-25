@@ -205,9 +205,14 @@ function dibujarLinea(color,xinicial,yinicial,xfinal,yfinal,lienzo,grueso) {
     lienzo.closePath();
 }
 
-// input.addEventListener("keyup",evaluarEntrada);
+input.addEventListener("keyup",evaluarEntrada2);
 boton.addEventListener("click",evaluarEntrada);
 
+
+function evaluarEntrada2(evento){
+    if(evento.keyCode==13)
+        compilar();
+}
 function evaluarEntrada(){
     compilar();
 }
@@ -226,7 +231,6 @@ function compilar(){
     lobo.y=0;
     cerdo.x=0;
     cerdo.y=0;
-    //reiniciar();
     tok=scanner();
     Prg();
 }
@@ -286,9 +290,7 @@ function parea(t){
 }
 function Prg(){
     //console.log(entrada);
-    //parea("begin");
     Bloque();
-    //parea("end");
 }
 
 function Bloque(){
@@ -333,7 +335,7 @@ function error(){
     console.error("Ha ocurrido un error");
 }
 /*
-    Prg-> begin Bloque end
+    Gramatica:
     Bloque-> Instruccion Bloque
     Instruccion -> moverse(Direccion);
     Direccion -> derecha
