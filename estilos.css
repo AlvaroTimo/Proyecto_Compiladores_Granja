@@ -1,0 +1,19 @@
+body{
+    background-color: azure;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+#container{
+    display: flex;
+    margin-left: 23vh;
+    margin-top: 8vh;
+    flex-wrap: wrap;
+}
+
+button{
+    margin-left: 110vh;
+}
